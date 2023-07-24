@@ -27,7 +27,7 @@ class TV extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: (){
-                    Navigator.pop(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Description(
