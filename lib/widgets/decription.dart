@@ -33,10 +33,13 @@ class Description extends StatelessWidget {
                     child: Image.network(bannerurl,fit: BoxFit.cover,),
                   )),
                   Positioned(
-                    bottom: 10,
-                    child: Text(' ⭐ Average rating-$vote  ($vote_count)',style: TextStyle(
-                      color: Colors.black,fontWeight: FontWeight.bold,  
-                    ),))//TODO:ADD TOTAL VOTING
+                    bottom: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left:5.0),
+                      child: Text(' ⭐ Average rating-$vote/10  ($vote_count)  ',style: TextStyle(
+                        color: Colors.black,fontWeight: FontWeight.bold,backgroundColor: Colors.amber[50],fontSize: 16, 
+                      ),),
+                    ))//TODO:ADD TOTAL VOTING
                 ],
               ),
             ),
