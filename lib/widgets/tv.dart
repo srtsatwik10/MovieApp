@@ -3,7 +3,7 @@ import 'package:movie_app/utils/text.dart';
 import 'package:movie_app/widgets/decription.dart';
 
 class TV extends StatelessWidget {
-  TV({super.key, required this.tv});
+  const TV({super.key, required this.tv});
 
   final List tv;
 
@@ -34,7 +34,7 @@ class TV extends StatelessWidget {
                                 name: tv[index]['original_name'] != null
                                     ? tv[index]['original_name']
                                         .toString()
-                                    : tv[index]['title'].toString(),
+                                    : tv[index]['name'].toString(),
                                 dscrp: tv[index]['overview'].toString(),
                                 bannerurl: 'https://image.tmdb.org/t/p/w500' +
                                     tv[index]['backdrop_path'],
@@ -42,7 +42,7 @@ class TV extends StatelessWidget {
                                     tv[index]['poster_path'],
                                 vote:
                                     (tv[index]['vote_average'].toInt()).round(),
-                                launch: tv[index]['release_date'], 
+                                launch: tv[index]['first_air_date'], 
                                 vote_count: tv[index]['vote_count'],)));
                   },
                   child: Container(
